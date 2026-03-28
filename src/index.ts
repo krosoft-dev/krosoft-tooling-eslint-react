@@ -42,3 +42,23 @@ export function createReactConfig(
     },
   });
 }
+
+export function createReactLovableConfig(
+  options: ReactConfigOptions,
+): ReturnType<typeof tseslint.config> {
+  return tseslint.config(...createReactConfig(options), {
+    files: ["**/*.{ts,tsx}"],
+    rules: {
+      // Rules incompatible with strictNullChecks: false (Lovable-generated code)
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/no-unnecessary-condition": "off",
+      "@typescript-eslint/prefer-nullish-coalescing": "off",
+      "@typescript-eslint/no-confusing-void-expression": "off",
+      "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+      // Rules too noisy for Lovable-generated code
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-useless-default-assignment": "off",
+    },
+  });
+}
