@@ -4,11 +4,23 @@
   "description": "Krosoft ESLint shared config for React",
   "type": "module",
   "exports": {
-    ".": "./index.js"
+    ".": "./dist/index.js"
   },
   "files": [
-    "index.js"
+    "dist"
   ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@krosoft/tooling-eslint": "*",
+    "eslint": ">=9.0.0",
+    "eslint-plugin-react": ">=7.0.0",
+    "eslint-plugin-react-hooks": ">=5.0.0",
+    "eslint-plugin-react-refresh": ">=0.4.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": ">=8.0.0"
+  },
   "peerDependencies": {
     "@krosoft/tooling-eslint": "*",
     "eslint": ">=9.0.0",
