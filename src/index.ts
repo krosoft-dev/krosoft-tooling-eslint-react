@@ -56,6 +56,7 @@ export function createReactLovableConfig(
       "@typescript-eslint/no-confusing-void-expression": "off",
       "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
       // Rules too noisy for Lovable-generated code
+      "react/jsx-no-leaked-render": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-useless-default-assignment": "off",
