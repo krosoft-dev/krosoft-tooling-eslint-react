@@ -33,6 +33,8 @@ export function createReactConfig(
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
 
+      "react-hooks/set-state-in-effect": "warn",
+
       "react/jsx-no-useless-fragment": "warn",
       "react/self-closing-comp": "warn",
       "react/no-unescaped-entities": "warn",
