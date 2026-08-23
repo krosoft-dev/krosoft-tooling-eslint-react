@@ -32,10 +32,12 @@ export function createReactConfig(
       ],
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
-      "react/jsx-no-useless-fragment": "error",
-      "react/self-closing-comp": "error",
+
+      "react/jsx-no-useless-fragment": "warn",
+      "react/self-closing-comp": "warn",
+      "react/no-unescaped-entities": "warn",
       "react/jsx-curly-brace-presence": [
-        "error",
+        "warn",
         { props: "never", children: "never" },
       ],
 
@@ -58,6 +60,10 @@ export function createReactLovableConfig(
       "@typescript-eslint/prefer-nullish-coalescing": "off",
       "@typescript-eslint/no-confusing-void-expression": "off",
       "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+      "@typescript-eslint/no-unnecessary-type-assertion": "off",
+      "@typescript-eslint/no-unnecessary-type-conversion": "off",
+      "@typescript-eslint/no-non-null-assertion": "warn",
+
       // Rules too noisy for Lovable-generated code
 
       "@typescript-eslint/explicit-function-return-type": "off",
