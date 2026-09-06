@@ -6,7 +6,6 @@ import { createBaseConfig } from "@krosoft/tooling-eslint";
 
 interface ReactConfigOptions {
   tsconfigRootDir: string;
-  project?: string[];
 }
 
 export function createReactConfig(
